@@ -181,6 +181,6 @@ variable "tectonic_metal_calico_mtu" {
   description = <<EOF
 (optional) Sets the MTU size for workload interfaces and the IP-in-IP tunnel device.
 
-Note: This setting is only effective, if tectonic_networking is set to `calico`.
+Note: This setting is only effective, if tectonic_networking is set to `calico-ipip`.
 EOF
 }
