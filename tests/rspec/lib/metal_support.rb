@@ -167,7 +167,8 @@ module MetalSupport
   end
 
   def self.save_to_file(service_name, output)
-    logs_path = "#{root_path}build/#{ENV['CLUSTER']}/logs/systemd"
+    logs_path = "../build/#{ENV['CLUSTER']}/logs/systemd"
+    FileUtils.mkdir_p(logs_path)
     save_file = File.open("#{logs_path}/#{service_name}.log", 'w+')
     save_file << output
     save_file.close
